@@ -1,53 +1,35 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-  <title>Realtime Image Identification</title>
+	<title>AI MUSIC WEB APP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
   <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="style.css">
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.js"></script>
 </head>
-
-<body background="background_2.jpg">
-  <center>
-    <h3 class="btn btn-info heading">Realtime Face Recognition
-      <hr>
-      <center>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 heading_div">
-          Model is trained on
-          <br>
-          <div class="btn btn-warning heading_div2">
-            Dad(Ashvin) | Mom(Simoli) | Brother(Gyaan) | Sister(Nia)
-          </div>
-        </div>
-      </center>
-      <br>
-      </h3>
-      <br><br>
-
-      <p class="btn btn-warning result_para_tag">Name of the Family Member :
-        <span id="result_object_name"></span>
-      </p>
-    
-      <br><br>
-      <p class="btn btn-warning result_para_tag">Accuracy :
-        <span id="result_accuracy_name"></span>
-      </p>
-  </center>
-
-  <div class="copy_right_footer">
-    Developed by - Gyaan Patel
-  </div>
+<body background="istockphoto-1076840920-170667a.jpg">
+<center>
+  	<h3 class="btn btn-primary heading">AI MUSIC WEB APP
+	    <br>
+	    <span class="note">NOTE - Show your left-hand wrist to play Peter Pan song. 
+        Show your right-hand wrist to play Harry Potter Theme song.</span>
+  	</h3>
+  <div id="result" class="btn btn-warning">
+    Song Name
+  </div>  
+	<br><br>
+  <button onclick="play_Harry();" class="btn btn-success play_harry_button">Play Harry Potter</button>
+  <button onclick="play_Peter();" class="btn btn-primary play_peter_button">Play Peter Pan</button>
+  <button onclick="pause();" class="btn btn-warning pause_button">Pause</button>
+</center>
 
 <script src="main.js"></script>
 </body>
-
 </html>
-
-

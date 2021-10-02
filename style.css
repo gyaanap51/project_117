@@ -3,34 +3,57 @@
     font-size: 23px;
     width: 100%;
     margin: 0px;
-    box-shadow: 5px 5px 5px grey;
 }
-.heading_div
+.note
 {
-    float: none;
-    background: white;
-    padding: 10px;
-    border-radius: 20px;
+    font-size: 15px;
     color: black;
-    box-shadow: 5px 5px 5px grey;
 }
-.heading_div2
+body
 {
-    font-size: 18px;
+    background-size: cover;
 }
-.copy_right_footer{
-    position: fixed;
-    color: white;
-    bottom: 0;
-    width: 100%;
-    background-color: grey;
-    line-height: 3;
-    text-align: center;
+.div_speed
+{
+    float: left;
+}
+.div_speed_img
+{
+    width: 200px;
+    border-radius: 100px;
+}
+#speed
+{
+    font-size: 23px;
+    margin: 15px;
+}
+.div_volume
+{
+    float: right;
+}
+.div_volume_img
+{
+    width: 200px;
+    border-radius: 100px;
+}
+#volume
+{
+    font-size: 23px;
+    margin: 15px;
 }
 canvas
 {
-    border:5px solid white;
-    border-radius:20px;
-    box-shadow:5px 5px 5px grey;
-    margin-top:150px;
+    border-color: whitesmoke;
+    border-width: 5px;
+    border-radius: 15px;
+    border-style: solid;
+    margin-top: 85px;
+
+}
+#result
+{
+    margin: 25px;
+    font-size: 45px;
+    font-style: italic;
+    margin-bottom: 30px;
 }
