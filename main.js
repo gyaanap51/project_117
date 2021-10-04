@@ -55,13 +55,17 @@ function draw(){
     fill("#ff0000");
     stroke("#ff0000");
     if(scoreLeftWrist > 0.2 ){
+        if(song2.isPlaying()==false){
         song1.play();
+        }
         song2.stop();
         circle(leftWristX,leftWristY,20);
     }
     else if(scoreRightWrist > 0.2)
     {
+        if(song1.isPlaying()==false){
         song2.play(); 
+        }
         song1.stop();
         circle(leftWristX,leftWristY,20);
     }
