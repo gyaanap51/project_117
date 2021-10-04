@@ -57,13 +57,15 @@ function draw(){
     if(scoreLeftWrist > 0.2 ){
         song1.play();
         song2.stop();
+        circle(leftWristX,leftWristY,20);
     }
     elseif(scoreRightWrist > 0.2)
     {
         song2.play(); 
         song1.stop();
+        circle(leftWristX,leftWristY,20);
     }
-    circle(leftWristX,leftWristY,20);
+    
 
 }
 function play_Harry(){
