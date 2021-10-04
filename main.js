@@ -5,6 +5,7 @@ leftWristY = 0;
 rightWristX = 0;
 rightWristY = 0;
 scoreLeftWrist = 0;
+scoreRightWrist = 0;
 
 function preload()
 {
@@ -32,7 +33,8 @@ function gotPoses(results)
     if(results.length > 0)
     {
         console.log(results);
-        scoreLeftWrist = results[0].pose.keypoints[9].score;        
+        scoreLeftWrist = results[0].pose.keypoints[9].score; 
+        scoreRightWrist = results[0].pose.keypoints[10].score; 
         leftWristX = results[0].pose.leftWrist.x;
         leftWristY = results[0].pose.leftWrist.y;
         console.log("leftWristX =" + leftWristX +"leftWristY ="+ leftWristY);
@@ -54,6 +56,12 @@ function draw(){
     stroke("#ff0000");
     if(scoreLeftWrist > 0.2 ){
         song1.play();
+        song2.stop();
+    }
+    elseif(scoreRightWrist > 0.2)
+    {
+        song2.play(); 
+        song1.stop();
     }
     circle(leftWristX,leftWristY,20);
 
