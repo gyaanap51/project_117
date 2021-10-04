@@ -59,7 +59,7 @@ function draw(){
         song2.stop();
         circle(leftWristX,leftWristY,20);
     }
-    elseif(scoreRightWrist > 0.2)
+    else if(scoreRightWrist > 0.2)
     {
         song2.play(); 
         song1.stop();
