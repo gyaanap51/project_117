@@ -1,35 +1,32 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<title>AI MUSIC WEB APP</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+	<title>Object Detection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
 
-  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.js"></script>
 </head>
-<body background="istockphoto-1076840920-170667a.jpg">
-<center>
-  	<h3 class="btn btn-primary heading">AI MUSIC WEB APP
-	    <br>
-	    <span class="note">NOTE - Show your left-hand wrist to play Peter Pan song. 
-        Show your right-hand wrist to play Harry Potter Theme song.</span>
-  	</h3>
-  <div id="result" class="btn btn-warning">
-    Song Name
-  </div>  
-	<br><br>
-  <button onclick="play_Harry();" class="btn btn-success play_harry_button">Play Harry Potter</button>
-  <button onclick="play_Peter();" class="btn btn-primary play_peter_button">Play Peter Pan</button>
-  <button onclick="pause();" class="btn btn-warning pause_button">Pause</button>
-</center>
 
-<script src="main.js"></script>
+<body background="background.jpg">
+  <center>
+    <h1 class="btn btn-info heading">Object Detection</h1>
+    <br><br>
+    <button onclick="room1()" class="btn btn-primary">TV, Table</button>
+    <br><br>
+    <button onclick="room2()" class="btn btn-primary">Chair, Dinning Table</button>
+    <br><br>
+    
+
+  </center>
+
+  <script src="main.js"></script>
+
 </body>
 </html>
