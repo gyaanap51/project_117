@@ -1,5 +1,6 @@
 image = "";
 status = "";
+object = [];
 
 function preload(){
  img=loadImage('IMG_2060.jpg');
@@ -26,22 +27,24 @@ function gotResult(error, results) {
         console.log(error);
     }
     console.log(results);
+    object = results;
 }
 function draw(){
 image(img, 0, 0, 640, 480);
-fill("#FF0000");
-text("Dinning Table", 125, 225);
-noFill();
-stroke("#FF0000");
-rect(25, 100, 450, 150);
+if(status !="")
+{
+    for (i =0; i<object.length; i++)
+    {
+        document.getElementById("status").innerHTML = "Status :P Object Dectected";
 
-
-
-fill("#FF0000");
-text("Chair", 350, 350);
-noFill();
-stroke("#FF0000");
-rect(335, 175, 200, 225);
+        fill("#FF0000")
+        percent = floor(object[i].confidence *100);
+        text(object[i].label + " " + percent + "%", object[i].x+15, object[i].y+15);
+        noFill();   
+        stroke("#FF0000");
+        rect(object[i].x, object[i].y, object[i].width, object[i].height);
+    }
+}
    
     
 }
