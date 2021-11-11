@@ -1,9 +1,9 @@
-image = "";
+image2 = "";
 status = "";
 object = [];
 
 function preload(){
- img=loadImage('IMG_2060.jpg');
+ image2=loadImage('IMG_2060.jpg');
 }
 
 function back(){
@@ -20,7 +20,7 @@ function setup(){
 function modelLoaded(){
     console.log("Model Loaded!")
     status = true;
-    objectDetector.detect(img, gotResult);
+    objectDetector.detect(image2, gotResult);
 }
 function gotResult(error, results) {
     if(error){
@@ -30,7 +30,7 @@ function gotResult(error, results) {
     object = results;
 }
 function draw(){
-image(img, 0, 0, 640, 480);
+image(imagde2, 0, 0, 640, 480);
 if(status !="")
 {
     for (i =0; i<object.length; i++)
